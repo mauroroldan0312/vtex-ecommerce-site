@@ -1,0 +1,67 @@
+{
+  "username": "testuser",
+  "password": "testpassword",
+  "name": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "userType": "admin"
+}
+
+{
+    "username": "testuser",
+    "password": "$2a$10$pP/z/a9F41xhlWqdw8J/COOkGT8qWCh8W4TMt0tFa8uiGFE8b2CTK",
+    "name": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "userType": "admin",
+    "_id": "672d664b89f1054c5ae343fa",
+    "createdAt": "2024-11-08T01:15:55.238Z",
+    "__v": 0
+}
+
+---
+
+
+Curl de registro
+
+curl --location 'http://localhost:5000/api/auth/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "testuser",
+  "password": "testpassword",
+  "name": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "userType": "admin"
+}'
+
+
+Curl de actualización de datos
+
+curl --location --request PUT 'http://localhost:5000/api/auth/update/672d548a10a37df3accbd483' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "updated_username",
+  "name": "Updated Name",
+  "lastName": "Updated LastName",
+  "email": "updated.email@example.com",
+  "userType": "updated_userType"
+}'
+
+Curl de inicio de sesión
+
+curl --location --request PUT 'http://localhost:5000/api/auth/update/672d548a10a37df3accbd483' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "updated_username",
+  "name": "Updated Name",
+  "lastName": "Updated LastName",
+  "email": "updated.email@example.com",
+  "userType": "updated_userType"
+}'
+
+
+Curl para obtener productos
+
+curl --location 'http://localhost:5000/api/products/?_from=0&_to=10&ft=Festival' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MmQ2NjRiODlmMTA1NGM1YWUzNDNmYSIsImlhdCI6MTczMTAzMDY4NywiZXhwIjoxNzMxMTE3MDg3fQ.j1Q9Qy4kMqI3wF7EBJ5mYvRdbDEGlRbR1v-IRclfTOQ'
