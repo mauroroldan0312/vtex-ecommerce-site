@@ -11,7 +11,7 @@ import { ProductsProvider } from "./shared/providers/ProductsProvider";
 
 export const Router = () => {
   return (
-    <BrowserRouter basename="/test-vtex-ecommerce-site">
+    <BrowserRouter basename="/vtex-ecommerce-site">
       <UserProvider>
         <Routes>
           <Route path="/" element={<App />}>
